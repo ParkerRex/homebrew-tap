@@ -1,5 +1,17 @@
 # Parker Rex's Homebrew tap
 
+## AI Usage Stats
+
+Install [AI Usage Stats](https://github.com/ParkerRex/ai-usage-stats), a native macOS menu bar app that shows how much of your Claude and Codex usage limits are left on each account and when they reset:
+
+```sh
+brew install --cask parkerrex/tap/ai-usage-stats
+```
+
+Requires macOS 14 or later. The cask installs the Developer ID signed and notarized GitHub release, with Apple silicon and Intel binaries. Open **AI Usage Stats** from Applications; it lives in the menu bar. Update with `brew upgrade --cask parkerrex/tap/ai-usage-stats`.
+
+## Mac Stats
+
 Install [Mac Stats](https://github.com/ParkerRex/mac-stats), a native macOS menu bar CPU monitor for apps and AI tools:
 
 ```sh
@@ -31,7 +43,9 @@ brew uninstall --cask parkerrex/tap/mac-stats
 
 ## Maintenance
 
-`Casks/mac-stats.rb` is the canonical cask definition. After publishing a stable Mac Stats release, update its `version` and `sha256` using the actual public archive, then run:
+`Casks/ai-usage-stats.rb` and `Casks/mac-stats.rb` are the canonical cask definitions. AI Usage Stats follows its [release procedure](https://github.com/ParkerRex/ai-usage-stats/blob/main/docs/RELEASING.md); Mac Stats follows the steps below.
+
+`Casks/mac-stats.rb` is the Mac Stats cask. After publishing a stable Mac Stats release, update its `version` and `sha256` using the actual public archive, then run:
 
 ```sh
 brew style --cask parkerrex/tap/mac-stats
