@@ -1,6 +1,6 @@
 cask "ai-usage-stats" do
-  version "0.1.0"
-  sha256 "e75e3c5d981231b3bc4555c51c6bc993d901aab6871094b982ef44f42b3fab31"
+  version "0.2.0"
+  sha256 "0368cdc88d27d9461379d458b110be3a40c1aa6f4b94438edad9c5d9ee5d0b2b"
 
   url "https://github.com/ParkerRex/ai-usage-stats/releases/download/v#{version}/AI-Usage-Stats-#{version}.zip"
   name "AI Usage Stats"
