@@ -1,11 +1,11 @@
-cask "ai-usage-stats" do
-  version "0.2.0"
-  sha256 "0368cdc88d27d9461379d458b110be3a40c1aa6f4b94438edad9c5d9ee5d0b2b"
+cask "limits-left" do
+  version "0.2.1"
+  sha256 "bb68e2f0f90c3c30ef21d87b7bf5c70d528679c548b81b1c3ad3cee1bceb55da"
 
-  url "https://github.com/ParkerRex/ai-usage-stats/releases/download/v#{version}/AI-Usage-Stats-#{version}.zip"
-  name "AI Usage Stats"
+  url "https://github.com/ParkerRex/limits-left/releases/download/v#{version}/Limits-Left-#{version}.zip"
+  name "Limits Left"
   desc "Menu bar monitor for Claude and Codex usage limits across accounts"
-  homepage "https://github.com/ParkerRex/ai-usage-stats"
+  homepage "https://github.com/ParkerRex/limits-left"
 
   livecheck do
     url :url
@@ -14,7 +14,7 @@ cask "ai-usage-stats" do
 
   depends_on macos: :sonoma
 
-  app "AI Usage Stats.app"
+  app "Limits Left.app"
 
   uninstall quit: "com.parkerrex.ai-usage-stats"
 
