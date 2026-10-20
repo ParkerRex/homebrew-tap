@@ -1,4 +1,5 @@
 {
-  "ai-usage-stats": "limits-left",
+  "ai-usage-stats": "little-limits",
+  "limits-left": "little-limits",
   "mac-stats": "little-mac-stats"
 }
