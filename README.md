@@ -20,9 +20,9 @@ Install [Little Mac Stats](https://github.com/ParkerRex/little-mac-stats), a nat
 brew install --cask parkerrex/tap/little-mac-stats
 ```
 
-Requires macOS 14 or later. The cask installs the Developer ID signed and notarized GitHub release, with Apple silicon and Intel binaries. Open **Mac Stats** from Applications after installation.
+Requires macOS 14 or later. The cask installs the Developer ID signed and notarized GitHub release, with Apple silicon and Intel binaries. Open **Little Mac Stats** from Applications after installation.
 
-Little Mac Stats was called Mac Stats through 0.2.0, and the cask still installs that release as **Mac Stats** until the first Little Mac Stats release. That release is a clean break with a new app name and bundle identifier, so the app's own updater will not move 0.2.0 to it; `brew upgrade` will. `cask_renames.json` moves existing `mac-stats` installs to `little-mac-stats`.
+Little Mac Stats was called Mac Stats through 0.2.0. Version 0.3.0 is a clean break with a new app name and bundle identifier, so the app's own updater will not move 0.2.0 to it; `brew upgrade` will. `cask_renames.json` moves existing `mac-stats` installs to `little-mac-stats`.
 
 If the same release is already installed manually, Homebrew can adopt the identical app:
 
