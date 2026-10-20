@@ -1,11 +1,8 @@
 cask "little-mac-stats" do
-  version "0.2.0"
-  sha256 "e4ec84d023c73bea2b3ce727cacaba264c6fb454ed87d185de803b6971d6508f"
+  version "0.3.0"
+  sha256 "1d45f5ef8478d00c730c558e1524ff21525ac242c7b91450bcc8d3bbe232cd27"
 
-  # 0.2.0 shipped before the rename. Starting with the next release, the archive
-  # is Little-Mac-Stats-#{version}.zip containing "Little Mac Stats.app" with the
-  # bundle identifier com.thelittleworker.little-mac-stats.
-  url "https://github.com/ParkerRex/little-mac-stats/releases/download/v#{version}/Mac-Stats-#{version}.zip"
+  url "https://github.com/ParkerRex/little-mac-stats/releases/download/v#{version}/Little-Mac-Stats-#{version}.zip"
   name "Little Mac Stats"
   desc "Menu bar CPU monitor for apps and AI tools"
   homepage "https://github.com/ParkerRex/little-mac-stats"
@@ -18,9 +15,9 @@ cask "little-mac-stats" do
   auto_updates true
   depends_on macos: :sonoma
 
-  app "Mac Stats.app"
+  app "Little Mac Stats.app"
 
-  uninstall quit: "com.parkerrex.mac-stats"
+  uninstall quit: "com.thelittleworker.little-mac-stats"
 
-  zap trash: "~/Library/Preferences/com.parkerrex.mac-stats.plist"
+  zap trash: "~/Library/Preferences/com.thelittleworker.little-mac-stats.plist"
 end
