@@ -1,16 +1,16 @@
 # Parker Rex's Homebrew tap
 
-## Limits Left
+## Little Limits
 
-Install [Limits Left](https://github.com/ParkerRex/limits-left), a native macOS menu bar app that shows how much of your Claude and Codex usage limits are left on each account and when they reset:
+Install [Little Limits](https://github.com/ParkerRex/little-limits), a native macOS menu bar app that shows how much of your Claude and Codex usage limits are left on each account and when they reset:
 
 ```sh
-brew install --cask parkerrex/tap/limits-left
+brew install --cask parkerrex/tap/little-limits
 ```
 
-Requires macOS 14 or later. The cask installs the Developer ID signed and notarized GitHub release, with Apple silicon and Intel binaries. Open **Limits Left** from Applications; it lives in the menu bar. Update with `brew upgrade --cask parkerrex/tap/limits-left`.
+Requires macOS 14 or later. The cask installs the Developer ID signed and notarized GitHub release, with Apple silicon and Intel binaries. Open the app from Applications; it lives in the menu bar. Update with `brew upgrade --cask parkerrex/tap/little-limits`.
 
-Limits Left was called AI Usage Stats before 0.2.1. `cask_renames.json` moves existing `ai-usage-stats` installs to `limits-left` on `brew upgrade`.
+Little Limits was called Limits Left in 0.2.1 and AI Usage Stats before that. Release 0.2.1 predates the rename, so the cask still installs its archive, which contains **Limits Left.app**, until the first Little Limits release. `cask_renames.json` moves existing `ai-usage-stats` and `limits-left` installs to `little-limits` on `brew upgrade`.
 
 ## Little Mac Stats
 
@@ -47,7 +47,7 @@ brew uninstall --cask parkerrex/tap/little-mac-stats
 
 ## Maintenance
 
-`Casks/limits-left.rb` and `Casks/little-mac-stats.rb` are the canonical cask definitions. Limits Left follows its [release procedure](https://github.com/ParkerRex/limits-left/blob/main/docs/RELEASING.md); Little Mac Stats follows the steps below.
+`Casks/little-limits.rb` and `Casks/little-mac-stats.rb` are the canonical cask definitions. Little Limits follows its [release procedure](https://github.com/ParkerRex/little-limits/blob/main/docs/RELEASING.md); Little Mac Stats follows the steps below.
 
 `Casks/little-mac-stats.rb` is the Little Mac Stats cask. After publishing a stable Little Mac Stats release, update its `version` and `sha256` using the actual public archive, then run:
 
