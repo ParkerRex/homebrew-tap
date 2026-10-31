@@ -2,14 +2,38 @@
 
 Homebrew casks for the Little AI Company Mac apps: `Casks/little-limits.rb` and `Casks/little-mac-stats.rb`. `cask_renames.json` moves old cask names to the current ones on `brew upgrade`. [README.md](README.md) has install instructions and the cask update steps.
 
-## Coding rules
+## Rules for every agent
 
-- Follow YAGNI: change what the release needs, nothing for an imagined later.
-- When deleting or renaming a cask, leave no vestigial traces, whale legs, or references to the old one outside `cask_renames.json`.
-- Never write a new unit test or integration test unless Parker explicitly asks for one. New end-to-end checks are allowed: install, upgrade or audit the real cask with `brew`.
-- Never add new code comments. Say why in the commit message.
-- Put temporary work files in `./tmp` if it exists, otherwise `/tmp`; never in the working tree.
-- To answer how Homebrew or a cask DSL stanza works, read Homebrew's source, not memory.
+These rules apply to every agent and every person here. Parker set them on
+2026-10-31 for the move to trunk-based development. When one of them conflicts
+with an older sentence anywhere in this repository, this section wins.
+
+### Code
+
+- Build what the task needs now, not what it might need later.
+- When you delete or rename a cask, leave no trace of it outside
+  `cask_renames.json`.
+- Leave style to `brew style`. Do not reflow, reorder or rename lines the
+  change does not need.
+- To learn how Homebrew behaves, read its source (`brew --repository`, or a
+  `/tmp` clone of Homebrew/brew), not only its docs.
+- Scratch files go in `/tmp`, never beside the casks.
+
+### Tests
+
+- Never write a new unit test or integration test unless the person explicitly
+  asked for that test. You may write a new end-to-end check: install, upgrade
+  or audit the real cask with `brew`.
+
+### Comments
+
+- Never add a new code comment. Put the why in the commit message.
+
+### Also
+
+- Plain words, no em dashes. Never on your own: publish a cask for an
+  unreleased build, release to users or contact anyone. Agents propose;
+  Parker acts. Never print or commit a key, token or credential.
 
 ## Updating a cask
 
@@ -25,4 +49,11 @@ Then install or upgrade the cask and check the app's signature and notarization.
 
 ## Shipping on main
 
-There are no branches, pull requests or CI in this repository. Commit on `main`, one change per commit with a short conventional subject such as `feat: update Little Mac Stats to 0.3.1`, and `git push origin main`. Put the `brew` commands you ran and their results in the commit body, or say which were skipped and why. Never force-push or amend a pushed commit; fix a bad cask with a new commit or `git revert`.
+Everyone, human or agent, commits straight to `main`. There are no pull
+requests, branches or CI (Parker, 2026-10-31). One commit, one purpose, with a
+`type: summary` subject such as `feat: update Little Mac Stats to 0.3.1`. Read
+every line of the diff, put the `brew` commands you ran and their results in
+the commit body (or say which were skipped and why), then
+`git push origin HEAD:main`. Never push a branch, force-push or amend a pushed
+commit; fix a bad cask with a new commit or `git revert`. Only Parker changes
+repository settings.
