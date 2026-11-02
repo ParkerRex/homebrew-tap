@@ -1,6 +1,6 @@
 cask "little-mac-stats" do
-  version "0.3.0"
-  sha256 "1d45f5ef8478d00c730c558e1524ff21525ac242c7b91450bcc8d3bbe232cd27"
+  version "0.4.0"
+  sha256 "017fe1a81cfc8342be95bf14b92109c4a994c46f81d751f71e84de4eb010741a"
 
   url "https://github.com/ParkerRex/little-mac-stats/releases/download/v#{version}/Little-Mac-Stats-#{version}.zip"
   name "Little Mac Stats"
