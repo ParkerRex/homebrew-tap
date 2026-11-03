@@ -1,6 +1,6 @@
 cask "little-limits" do
-  version "0.3.0"
-  sha256 "83cfda74a001392ac2ee65e53153413894eedf3193c0dce9cdede378e723b74e"
+  version "0.4.0"
+  sha256 "56b6c2b29aa8bda2927310aff8f6b5adcdfd90adfde92931e1f217ce0e53b2d7"
 
   url "https://github.com/Little-AI-Company/little-limits/releases/download/v#{version}/Little-Limits-#{version}.zip"
   name "Little Limits"
